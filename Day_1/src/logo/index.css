@@ -1,0 +1,19 @@
+.active{
+    text-decoration: underline!important;
+
+}
+.nav-link {
+    color: white !important;
+}
+.navbar{
+    background-color: #943934 !important;
+}
+
+@media only screen and (max-width: 990px){
+    .nice{
+        width: 100% !important;
+    }
+    .iconmedia{
+        justify-content: center !important;
+    }
+}

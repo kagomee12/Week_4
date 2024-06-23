@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/logo/index.css">
+</head>
+
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="#"><img src="/logo/sticker_10.webp" alt="" style="width: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/myproject">Add Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonial">Testimonials</a>
+                    </li>
+                </ul>
+                <a href="/contact_me"><button class="btn btn-danger" type="submit">Contact Me</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class=" container mt-5 d-flex justify-content-center rounded-5 bg-light-subtle p-0" style="flex-wrap: wrap;">
+        <div class="w-50 container d-flex flex-column h-75 m-0 nice">
+            <h1 class="mt-3">Hi Welcome to my hunt</h1>
+            <div class="paragraph">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum aut Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Voluptate inventore eveniet aspernatur voluptatem ut nobis ea, illum fugit quis ex
+                    dolores
+                    magni debitis omnis saepe quo rerum deleniti commodi laborum? Lorem ipsum dolor sit, amet
+                    consectetur
+                    adipisicing elit. Earum, natus. Ullam modi illo fuga magnam quae praesentium? Veniam, nulla alias,
+                    eveniet
+                    ipsum, consequuntur ipsam numquam iste cum officiis libero dolore? vitae sed veniam dolores in!
+                    Reprehenderit, repellat laboriosam nobis esse dolor magni aspernatur possimus, delectus illo laborum
+                    laudantium iure optio!</p>
+            </div>
+            <div class="d-flex flex-row mb-3 gap-4 iconmedia">
+                <div><button type="button" class="btn btn-secondary rounded-pill btn-sm px-3"
+                        style="width: 120px;">Contact</button></div>
+                <div class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"><a
+                        href="" class="CV">Download CV <i class="fa-solid fa-download"> </i></a>
+                </div>
+            </div>
+            <div class="d-flex flex-row gap-5 mb-4 iconmedia">
+                <a href="https://www.linkedin.com/in/kiagus-alfitrah-muhammad-akbar-591496278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="icon"><i class="fa-brands fa-linkedin" style="font-size: 2em; "></i></a>
+                <a href="https://www.instagram.com/kgsalfitrah?igsh=b3NlN2Fta2Q3d3J3" class="icon"><i
+                        class="fa-brands fa-instagram" style="font-size: 2em; "></i></a>
+                <a href="https://web.facebook.com/?locale=id_ID&_rdc=1&_rdr" class="icon"><i
+                        class="fa-brands fa-facebook" style="font-size: 2em; "></i></a>
+                <a href="https://x.com/?lang=id" class="icon"><i class="fa-brands fa-x-twitter"
+                        style="font-size: 2em; "></i></a>
+            </div>
+        </div>
+
+        <div class="w-50 d-flex flex-column align-self-center container m-0 nice"
+            style="line-height: 0; min-width: 360px;">
+            <div class="justify-content-center d-flex ">
+                <img src="/logo/sticker_10.webp" alt="" style="width: 50%;">
+            </div>
+            <div class="text-center d-flex flex-column bg-dark-subtle w-50 m-auto">
+                <p>
+                <h3>Hu Tao</h3>
+                </p>
+                <p>Direktor Wangsheng funeral
+                    77<sup>th</sup></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <h1 style="text-align: center;">MY PROJECT</h1>
+    </div>
+    <div id="content" class="container d-flex flex-wrap justify-content-center gap-4 mt-5">
+       {{#each data}}
+        <div class="card d-flex" style="width: 18rem;">
+            {{!-- <a href=""> {{inputimage}} --}}
+              <img src="/logo/sticker_10.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> <a href="/detailblog/{{this.id}}" >{{this.judul}}</a></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Durasi: {{this.durasi}} </h6>
+                <p class="card-text">{{this.content}}</p>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  <i class="{{this.nodejsicon}}"></i> 
+                  <i class="{{this.reactjsicon}}"></i> 
+                  <i class="{{this.nextjsicon}}"></i> 
+                  <i class="{{this.typescripticon}}"></i> 
+                   
+                   
+                  
+                </h6>
+                <div class="d-flex justify-content-between">
+                    <a href="/update/{{this.id}}" class="btn btn-primary">Edit Blog</a>
+                    <form method="post" action="/deleteblog/{{this.id}}">
+                    <button class="btn btn-primary text-end">Delete blog</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+{{/each}}
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
