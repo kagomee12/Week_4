@@ -50,6 +50,13 @@
       </nav>
 
     <div class="container w-75 mt-5">
+         {{#if messages.danger}}
+            <div class="alert alert-danger" role="alert">
+                <div class="container">
+                    {{messages.danger}}
+                </div>
+            </div>
+    {{/if}}
         <h1 class="text-center">UPDATE MY PROJECT</h1>
         <div class="conutama">
             {{#each data}}

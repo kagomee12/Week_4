@@ -407,12 +407,12 @@ async function updateBlog(req, res) {
       typescript,
     } = req.body;
 
-    const inputimage = reqfile ? req.file.filename : "";
+    const inputimage = req.file ? req.file.filename : "";
     const authorName = req.session.user.name;
 
     if (!judul || !startdate || !enddate || !content || !inputimage || !(nodejs || reactjs || nextjs || typescript)) {
       req.flash("danger", "Semua data harus diisi");
-      return res.redirect('/myproject'); 
+      return res.redirect(`/update/${id}`); 
     } 
 
     const durasi = duration(startdate, enddate);
